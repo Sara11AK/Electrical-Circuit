@@ -1,0 +1,138 @@
+@import "../../app.scss";
+
+.hero {
+  height: calc(110vh - 100px);
+  overflow: hidden;
+ background: linear-gradient(180deg, #240435, #34064d);
+  position: relative;
+
+
+.navbar {
+  position: absolute;
+  top: 5%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 90%; 
+  background: rgba(206, 189, 206, 0.8); 
+  color: rgb(86, 11, 66);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  border-radius: 15px; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+  z-index: 10;
+
+  .navbar-left {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .navbar-right {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+
+    li a {
+      text-decoration: none;
+      color: rgb(86, 11, 66);
+      transition: color 0.3s ease;
+    font-size: 1.2rem;
+
+      &:hover {
+        color: #f8f9f9;
+      }
+    }
+  }
+}
+
+
+  .wrapper {
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+
+    .textContainer {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 40px;
+
+   
+
+      h1 {
+        font-size: 70px;
+        font-family:'Lucida Sans';
+        color: rgb(180, 111, 189);
+        letter-spacing: 5px;
+       text-Align: "center", 
+                  
+      }
+
+      h2 {
+        font-size: 30px;
+        font-family: 'Verdana';
+        color: rgb(255, 255, 255);
+       text-Align: "center",
+
+  
+      }
+
+      .buttons {
+        button {
+          padding: 20px;
+          border: 1px solid white;
+          border-radius: 10px;
+          background-color: transparent;
+          color: white;
+          margin-right: 20px;
+          cursor: pointer;
+          font-weight: 300;
+        }
+      }
+
+      
+    }
+  }
+
+.imageContainer {
+  position: absolute;
+  top: 25%;
+  right: 8%;
+  width: 580px;      
+  height: 580px;     
+  animation: rotateScale 6s linear infinite;
+
+ 
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;  
+  }
+}
+
+@keyframes rotateScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.4);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+  .slidingTextContainer {
+    position: absolute;
+    font-size: 50vh;
+    bottom: -120px;
+    white-space: nowrap;
+    color: #ffffff09;
+    width: 50%;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,52 @@
+html {
+  /* إذا تريد scroll-snap علق السطر التالي أو احذفه */
+  /* scroll-snap-type: y mandatory; */
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+body {
+    background:  #240435 ;
+
+  color: lightgray;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  /* scroll-snap-align: center; */ /* علق أو احذف هذا السطر */
+}
+
+/* ميديا كويري */
+@mixin mobile {
+  @media (max-width: 738px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (max-width: 1366px) {
+    @content;
+  }
+}
+
+/* متغيرات عامة */
+:root {
+  --transition: all 0.3s ease;
+  --dark-color: #333;
+}

@@ -1,0 +1,89 @@
+@import "../../app.scss";
+
+.Laws {
+  position: relative;
+  background: #240435;
+
+  .progress {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding-top: 10px;
+    text-align: center;
+    color: rgb(221, 193, 234);
+    font-size: 46px;
+    font-family: 'Lucida Sans';
+    letter-spacing: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .progressBar {
+  margin-top: 5px;
+  height: 5px;
+  width: 100%;  
+  max-width: 1700px; 
+  background-color: white;
+  transform-origin: left center; 
+}
+
+  }
+
+  
+  .portfolio__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 150vh;
+    padding: 40px 0;
+
+    .portfolio__wrapper {
+      max-width: 1366px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+
+      .portfolio__imageContainer {
+        flex: 1;
+        height: 500px;
+
+        img {
+          width: 500px;
+          height: 500px;
+          object-fit: cover;
+        }
+      }
+
+      .portfolio__textContainer {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        @include mobile {
+          transform: none !important;
+          padding: 10px;
+          align-items: center;
+          text-align: center;
+        }
+
+        h2 {
+          font-size: 72px;
+        }
+
+        p {
+          color: gray;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+.portfolio section {
+  margin-bottom: 20px;
+} 

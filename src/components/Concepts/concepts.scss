@@ -1,0 +1,138 @@
+@import "../../app.scss";
+
+.Concepts {
+background:  #240435 ;
+  height: 100%;
+max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .titleContainer {
+    margin-top: 100px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px  20px;
+    
+    padding: 20px;
+    margin-top: 20px;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+    }
+
+    .box {
+      padding: 10px;
+      border: 0.2px solid gray;
+      background: rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      height: auto;
+
+      @include mobile {
+        width: 100%;
+        border: none;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+      }
+    }
+
+    .box-charge { height: 240px; width: 400px; }
+    .box-current {  height: 240px; width: 400px;}
+    .box-voltage {height: 240px; width: 400px; }
+    .box-power { height: 240px; width: 400px;}
+    .box-passive { height: 340px;  width: 400px; }
+    .box-active {height: 340px;  width: 400px; }
+    .box-independent { height: 340px;  width: 400px;  }
+    .box-dependent { height: 340px;  width: 400px; }
+  }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img.icon {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 10px;
+  }
+
+  &.horizontal {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+
+    img.icon {
+      width: 200px;
+      height: 150px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    p, h2 {
+      margin: 0;
+    }
+  }
+}
+
+.icons {
+  display: flex;
+  gap: 50px;             
+  justify-content: center; 
+}
+
+.icon1 {
+  width: 90px;
+  height: 90px;
+}
+.icon2 {
+  width: 200px;
+    height: 150px;
+   margin: 0 auto 10px auto;  
+}
+ .icon3 {
+ width: 200px;
+    height: 150px;
+   margin: 0 auto 10px auto;  
+    
+}
